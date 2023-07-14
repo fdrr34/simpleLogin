@@ -1,3 +1,28 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginEntries">
+  <div class="loginBack">
+    <h6 class="headerLogin">Magic login</h6>
+
+    <input
+      class="loginInputs input"
+      id="email"
+      type="email"
+      formControlName="email"
+    />
+    <input
+      class="loginInputs input"
+      id="password"
+      type="password"
+      formControlName="password"
+    />
+    <button
+      class="loginBut buttons"
+      [disabled]="!loginEntries.valid"
+      type="submit"
+      (click)="doLogin()"
+    >
+      Log in
+    </button>
+    <a class="loginlinks">Forget password</a>
+    <a class="loginlinks">Sign in</a>
+  </div>
+</form>
