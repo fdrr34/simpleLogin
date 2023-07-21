@@ -1,18 +1,20 @@
 <form [formGroup]="loginEntries">
   <div class="loginBack">
-    <h6 class="headerLogin">Magic login</h6>
+    <h6 class="headerText">Magic login</h6>
 
     <input
       class="loginInputs input"
       id="email"
       type="email"
       formControlName="email"
+      placeholder="Email"
     />
     <input
       class="loginInputs input"
       id="password"
       type="password"
       formControlName="password"
+      placeholder="Password"
     />
     <button
       class="loginBut buttons"
@@ -22,7 +24,7 @@
     >
       Log in
     </button>
-    <a class="loginlinks">Forget password</a>
-    <a class="loginlinks">Sign in</a>
+    <p class="text" (click)="doLinksHandlers('forget-password')">Forget password</p>
+    <p class="text" (click)="doLinksHandlers('sign-in')">Sign in</p>
   </div>
 </form>

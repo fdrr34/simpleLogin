@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SignInModule } from './modules/sign-in/sign-in.module';
+import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignInComponent,
-    DashboardComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    SignInModule,
+    LoginModule,
+    HttpClientModule,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

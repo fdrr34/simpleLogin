@@ -1,0 +1,42 @@
+.header {
+  height: 0px;
+  margin: 35px 0px 50px 0px;
+}
+
+.loginBack {
+  height: 560px;
+}
+
+.singInInputs {
+  width: 300px;
+  height: 50px;
+  margin: 8px 8px;
+  border: none;
+  padding: 0px 7px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkboxStyle {
+  height: 19px;
+  width: 19px;
+}
+
+.checkboxDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.LogIntext{
+  margin: 19px 0px;
+}
+
+.LogIntext:hover {
+  color: #f74241;
+  font-size: 16px;
+  cursor: pointer;
+}

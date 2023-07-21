@@ -1,0 +1,66 @@
+<form [formGroup]="signInForm">
+  <div class="loginBack">
+    <p class="headerText header">Sign in</p>
+
+    <div class="name">
+      <input
+        style="width: 135px"
+        placeholder="First name"
+        class="input singInInputs"
+        type="text"
+        formControlName="firstName"
+      />
+
+      <input
+        style="width: 135px"
+        placeholder="Last name"
+        class="input singInInputs"
+        type="text"
+        formControlName="lastName"
+      />
+    </div>
+
+    <input
+      placeholder="Email"
+      class="input singInInputs"
+      type="email"
+      formControlName="email"
+    />
+
+    <input
+      placeholder="Phone"
+      class="input singInInputs"
+      type="phone"
+      formControlName="phone"
+    />
+
+    <input
+      placeholder="Password"
+      class="input singInInputs"
+      type="password"
+      formControlName="password"
+    />
+
+    <input
+      placeholder="Retype password"
+      class="input singInInputs"
+      type="password"
+      formControlName="repassword"
+    />
+    <div class="checkboxDiv">
+      <label for="rules" class="text">Accept rules</label>
+      <input id="rules" class="checkboxStyle" type="checkbox" formControlName="rules" />
+    </div>
+
+    <button
+      class="buttons"
+      type="submit"
+      [disabled]="!signInForm.valid"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+
+    <p class="text LogIntext" (click)="navigateToLogin()">Already have a account? Login</p>
+  </div>
+</form>

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-route.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { authService } from '../services/auth.service';
 
 
 
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginRoutingModule,
     ReactiveFormsModule
   ],
+  providers: [authService],
   declarations: [LoginComponent],
   exports: [LoginComponent]
 })

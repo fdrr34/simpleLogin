@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { signUserData } from '/webProjects/simpleLogin/src/app/models/sign-in.model';
-import { authService } from '../'
+import { signUserData } from '../models/sign-in.model';
+import { authService } from '../services/auth.service'
 
 @Component({
   selector: 'app-sign-in',
